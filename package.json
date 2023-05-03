@@ -1,0 +1,19 @@
+{
+  "name": "courses-sg",
+  "version": "1.0.0",
+  "description": "project using nodejs and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "safaa",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.2.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jquery": "^3.6.4",
+    "mongoose": "^7.0.5"
+  }
+}

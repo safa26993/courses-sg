@@ -1,0 +1,45 @@
+<%- include('../partials/header')-%>
+<%- include('../partials/navbar')-%>
+
+<!-- Modal signin -->
+<div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"><br><br><br><br>
+      <div class="modal-content">
+        <div class="modal-header" style="font-size: larger;">
+          <h5 class="modal-title" id="exampleModalLabel" >Sign in</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="InputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="InputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="Check1">
+              <label class="form-check-label" for="Check1">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn main-btn " data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn main-btn ">Sign in</button>
+        </div><p class="text-center">You do not have an account ? click here to <span> <a href="/users/signup">Create an account</a> </span> </p>
+      </div>
+    </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+   <div class="col">
+     <h1>signin page</h1>
+   </div>
+  </div>
+</div>     -->
+<%- include('../partials/footer')-%>

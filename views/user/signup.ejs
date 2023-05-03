@@ -1,0 +1,40 @@
+<%- include('../partials/header')-%>
+<%- include('../partials/navbar')-%>
+ 
+<!--sign up form-->
+        
+            <div class="container">
+              <div class="card shadow m-5">
+                <div class="card-body">
+                  <h3 class="title p-4 pb-0">Sign up for free</h3>
+                  <hr>
+                  <%- include('../partials/flashMessages') -%> 
+                  <form  action="/users/signup" method="post">
+                    <div class="mb-3">
+                      <label for="Username" class="form-label">Username</label>
+                      <input type="text" class="form-control" id="Username" aria-describedby="Username">
+                    </div>
+                    <div class="mb-3">
+                      <label for="Email1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="Help" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Password1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="Password1">
+                    </div>
+                    <div class="mb-3">
+                      <label for="Password2" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="Password2">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="w-100 btn main-btn btn-lg mt-3 shadow">Sign Up</button>
+                </div>       
+             </div>
+            </div>
+        </form> 
+ 
+<%- include('../partials/footer')-%>
