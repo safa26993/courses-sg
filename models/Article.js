@@ -7,6 +7,10 @@ const articleSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true
+    // },
+    // create_at: {
+    //     type: String,
+    //     required: true
     }
 })
 let Article = mongoose.model('Article', articleSchema, 'article')
