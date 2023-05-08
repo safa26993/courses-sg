@@ -10,5 +10,4 @@
 //     passReqToCallback : true
 // }, (req,username,password, done)=>{
 //     console.log(req.body)
-
 // }))

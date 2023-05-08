@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const User = require('../models/User')
-// const passport = require('passport')
+const passport = require('passport')
 
 // sign in form 
 router.get('/signin', (req,res)=> {
@@ -22,16 +22,16 @@ router.get('/signup', (req,res)=> {
 // sign up post request
 router.post('/signup', (req,res)=> {
     console.log(req.body)
-    res.json('sign up user  ')
+    res.json('sign up user')
 })
 
-
-// app.post('/signup',
-//   passport.authenticate('local.signup', {
-//     successRedirect: '/users/profile',
-//     failureRedirect: '/users/signup',
-//     failureFlash: true })
-//     )
+// router.post('/signup',
+//    passport.authenticate('local.signup', { //Strategy name
+//         successRedirect: '/users/profile',
+//         failureRedirect: '/users/signup',
+//         failureFlash: true 
+//    })
+// )
 
 //profile
 router.get('/profile', (req,res)=> {
@@ -44,4 +44,3 @@ router.get('/logout', (req,res)=> {
 })
 
 module.exports = router
-

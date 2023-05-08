@@ -4,13 +4,17 @@ const articleSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
+    content: {
         type: String,
         required: true
-    // },
-    // create_at: {
-    //     type: String,
-    //     required: true
+    },
+    date: {
+        type: Date,
+        required: true
+    },
+    created_at: {
+        type: Date,
+        required: true
     }
 })
 let Article = mongoose.model('Article', articleSchema, 'article')

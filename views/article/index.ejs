@@ -3,20 +3,23 @@
 
   <div class="blog pt-5 pb-5">
     <div class="container">
-      <div class="main-title text-center mt-5 mb-5 position-relative">
-        <h2>Read Our Blog</h2>
-        <p class="text-uppercase text-black-50">New Stories</p>
+      <div class="row mt-3">
+        <div class="col md-12">
+          <%- include('../partials/flashMessages') -%>
+        </div>      
+      </div>
+      <div class="main-title text-center mt-2 mb-5 position-relative">
+        <h2>Read the Articles</h2>
       </div>
       <% chunk.forEach((articles)=> {%>
         <div class="row mt-3">
           <% articles.forEach((article) => {%>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="card">
-                <!-- <img src="" class="card-img-top" alt="Blog Post" /> -->
                 <div class="card-body">
-                  <h5 class="card-title"><%= article.title%></h5>
-                  <p class="card-text"><%= article.description%></p>
-                  <a href="<%= '/article/' + article.id %>" class="btn main-btn">Show More</a>
+                  <h4 class="card-title"><%= article.title%></h4>
+                  <p><span class="badge rounded text-bg-info"><%= article.date.toDateString()%></span></p>
+                  <a href="<%= '/article/' + article.id %>" class="btn main-btn">Show</a>
                 </div>
               </div>
             </div>
@@ -26,105 +29,5 @@
     </div>  
   </div>  
   
-  
-
-      <!--<div class="row mt-3">
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 1</h5>
-              <p class="card-text">text 1</p>
-              <a href="#" class="btn btn-primary">Show More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 2</h5>
-              <p class="card-text">text 2</p>
-              <a href="#" class="btn btn-primary">Show More</a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 3</h5>
-              <p class="card-text">text 3</p>
-              <a href="#" class="btn btn-primary">Show More</a> 
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div class="row mt-3">
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 11</h5>
-              <p class="card-text">text 11</p>
-              <a href="#" class="btn btn-primary">Show More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 22</h5>
-              <p class="card-text">text 22</p>
-              <a href="#" class="btn btn-primary">Show More</a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 33</h5>
-              <p class="card-text">text 33</p>
-              <a href="#" class="btn btn-primary">Show More</a> 
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div class="row mt-3">
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 1</h5>
-              <p class="card-text">text 1</p>
-              <a href="#" class="btn btn-primary">Show More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 2</h5>
-              <p class="card-text">text 2</p>
-              <a href="#" class="btn btn-primary">Show More</a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card">
-            <img src="" class="card-img-top" alt="Blog Post" />
-            <div class="card-body">
-              <h5 class="card-title">title 3</h5>
-              <p class="card-text">text 3</p>
-              <a href="#" class="btn btn-primary">Show More</a> 
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div>-->
-
 
 <%- include('../partials/footer')-%>

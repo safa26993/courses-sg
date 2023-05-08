@@ -32,15 +32,21 @@ const Article = require('../models/Article')
 let newArticles = [
   new Article({
       title: 'beach cleaning at 11',
-      description: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'
+      content: 'Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,v',
+      date:  Date.now(),
+      created_at: Date.now()
   }),
   new Article({
       title: 'beach cleaning at 22',
-      description: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'
+      content: 'Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,v',
+      date:  Date.now(),
+      created_at: Date.now()
   }),
   new Article({
       title: 'beach cleaning at 33',
-      description: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'
+      content: 'Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,v',
+      date:  Date.now(),
+      created_at: Date.now()
   })
 ]
 
