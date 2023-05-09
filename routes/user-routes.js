@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../models/User')
 const passport = require('passport')
 
-// sign in form 
+// signin form 
 router.get('/signin', (req,res)=> {
     res.render('user/signin')
 })
@@ -16,26 +16,34 @@ router.post('/signin', (req,res)=> {
 
 //sign up form ا
 router.get('/signup', (req,res)=> {
-    res.render('user/signup')
+    res.render('user/signup'
+    // , {
+    //    error: req.flash('error')
+    // }
+    )
 })
 
 // sign up post request
-router.post('/signup', (req,res)=> {
-    console.log(req.body)
-    res.json('sign up user')
-})
+// router.post('/signup', (req,res)=> {
+//     console.log(req.body)
+//     res.json('sign up user')
+// })
 
-// router.post('/signup',
-//    passport.authenticate('local.signup', { //Strategy name
-//         successRedirect: '/users/profile',
-//         failureRedirect: '/users/signup',
-//         failureFlash: true 
-//    })
-// )
+router.post('/signup',
+   passport.authenticate('local.signup', { 
+        successRedirect: '/users/profile',
+        failureRedirect: '/users/signup',
+        failureFlash: true 
+   })
+)
 
 //profile
 router.get('/profile', (req,res)=> {
-    res.render('user/profile')
+    res.render('user/profile'
+    // ,{
+    //    success: req.flash('success') 
+    // }
+    )
 })
 
 //logout user

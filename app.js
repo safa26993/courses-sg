@@ -15,9 +15,9 @@ const passportSetup = require('./config/passport-setup')
 /// bring ejs tamplate
 app.set('view engine', 'ejs')
 
-// // bring body parser 
-// app.use(bodyParser.urlencoded({ extended: false }))
-// app.use(bodyParser.json())
+// bring body parser 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 /// bring static اضافة ملف الpublic يظهر في المشروع
 app.use(express.static('public'))
@@ -33,9 +33,10 @@ app.use(session({
 app.use(flash())
 
 // bring passport 
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(passport.initialize())
+app.use(passport.session())
 
+//home page
 app.get('/', (req,res)=> {
     res.redirect('/courses')
 })
@@ -50,7 +51,6 @@ app.use('/article', article)
 
 /// bring user routes
 const users = require('./routes/user-routes');
-const { default: mongoose } = require('mongoose');
 app.use('/users', users)
 
 ///listen to port 3000
