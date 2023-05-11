@@ -1,0 +1,41 @@
+<%- include('../partials/header')-%>
+
+<div class="app">
+  <div class="menu-toggle">
+    <div class="hamburger">
+      <span></span>
+    </div>
+  </div>
+  <% chunk.forEach((courses)=> {%>
+  <aside class="sidebar">
+    <% courses.forEach((cours) => {%>
+    <h4 class="text-center">Java Script</h4>
+    <nav class="menu">
+      <a href="#" class="menu-item "><%= article.title%></a>
+    </nav>
+    <%})%>
+  </aside>
+  <%})%>
+  <!-- <main class="content" id="11">
+    <h1>course title</h1>
+    <p>course content :
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, nihil qui, architecto tempora hic
+      ad beatae a esse vitae reiciendis, accusamus praesentium modi perspiciatis laboriosam ex. Repellendus
+      dolore natus fugiat?
+    </p>
+    <button id="play-btn">
+      go to play
+    </button>
+  </main> -->
+</div>
+
+<script>
+  const menu_toggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+
+  menu_toggle.addEventListener('click', () => {
+    menu_toggle.classList.toggle('is-active');
+    sidebar.classList.toggle('is-active');
+  });   
+</script>
+  <%- include('../partials/footer')-%>

@@ -17,5 +17,6 @@ const articleSchema = new mongoose.Schema({
         required: true
     }
 })
+
 let Article = mongoose.model('Article', articleSchema, 'article')
 module.exports = Article 

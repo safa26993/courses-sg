@@ -38,13 +38,13 @@ app.use(passport.session())
 
 //home page
 app.get('/', (req,res)=> {
-    res.redirect('/courses')
+    res.redirect('/cours')
 })
 
-/// bring courses routes
-const courses = require('./routes/courses-routes')
-app.use('/courses', courses)
-
+/// bring cours routes
+const cours = require('./routes/cours-routes')
+app.use('/cours', cours)
+cours
 /// bring articel routes
 const article = require('./routes/article-routes')
 app.use('/article', article)
@@ -54,6 +54,6 @@ const users = require('./routes/user-routes');
 app.use('/users', users)
 
 ///listen to port 3000
-app.listen(3000, ()=> {
+app.listen(3003, ()=> {
     console.log('server is running on port 3000');
 });

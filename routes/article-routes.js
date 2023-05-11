@@ -26,8 +26,7 @@ router.get('/create', (req,res)=> {
     res.render('article/create', {
     //   errors: false
          errors: req.flash('errors')
-    }
-    )
+    })
 })
 
 //save article to db

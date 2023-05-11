@@ -29,13 +29,13 @@ router.get('/signup', (req,res)=> {
 //     res.json('sign up user')
 // })
 
+//sign up post request
 router.post('/signup',
-   passport.authenticate('local.signup', { 
-        successRedirect: '/users/profile',
-        failureRedirect: '/users/signup',
-        failureFlash: true 
-   })
-)
+  passport.authenticate('local.signup', { 
+    successRedirect: '/users/profile',
+    failureRedirect: '/users/signup', 
+    failureMessage: true }),
+);
 
 //profile
 router.get('/profile', (req,res)=> {

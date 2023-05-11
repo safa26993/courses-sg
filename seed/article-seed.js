@@ -14,21 +14,6 @@ const Article = require('../models/Article')
 //     }
 // })
 
-// const seedArticle = async () => {
-//     const newArticle = new Article({
-//       title: 'title test',
-//       description: 'description test'
-//     });
-//     try {
-//       await newArticle.save();
-//       console.log('record was added');
-//     }
-//     catch(err) {
-//       console.log('err')
-//     }
-// }
-// seedArticle()
-
 let newArticles = [
   new Article({
       title: 'beach cleaning at 11',
