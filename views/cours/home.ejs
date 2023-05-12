@@ -1,95 +1,143 @@
 <%- include('../partials/header')-%>
   <%- include('../partials/navbar')-%>
 
-    <div class="category-card">
-      <div class="container">
-        <div class="main-title text-center mt-2 mb-5 position-relative">
+  <main>
+    <article>
+      <section class="section hero has-bg-image" id="home" aria-label="home"
+        style="background-image: url('/images/hero-bg.svg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 section-title">
+              The Best Program to <span class="span">Enroll</span> for Exchange
+            </h1>
+
+            <p class="hero-text">
+              Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.
+            </p>
+
+            <a href="#" class="btn has-before">
+              <span class="span">Start learning</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+          <figure class="hero-banner">
+
+            <div class="img-holder one" style="--width: 270; --height: 300;">
+              <img src="/images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" class="img-cover">
+            </div>
+
+            <div class="img-holder two" style="--width: 240; --height: 370;">
+              <img src="/images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" class="img-cover">
+            </div>
+
+            <img src="/images/hero-shape-1.svg" width="380" height="190" alt="" class="shape hero-shape-1">
+
+            <img src="/images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
+
+          </figure>
+
+        </div>
+      </section>
+      <section class="section category" aria-label="category" style="background-color:white;">
+        <div class="container" >
+
           <p class="section-subtitle">Languages</p>
+
           <h2 class="h2 section-title">
             Choose your <span class="span">Language</span> and start enjoying.
           </h2>
+
           <p class="section-text">
             Consectetur adipiscing elit sed do eiusmod tempor.
           </p>
-        </div>
-        <div class="row mt-4 mb-4">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="#" class="card-title">Html</a></h4>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="category-card" style="--color: 170, 75%, 41%">
+
+                <div class="card-icon">
+                  <img src="/images/category-1.svg" width="40" height="40" loading="lazy"
+                    alt="Online Degree Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Html</a>
+                </h3>
+
                 <p class="card-text">HTML is the standard markup language for creating Web pages</p>
+
+                <span class="card-badge">7 Lessons</span>
+
               </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="#" class="card-title">Css</a></h4>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 351, 83%, 61%">
+
+                <div class="card-icon">
+                  <img src="/images/category-2.svg" width="40" height="40" loading="lazy"
+                    alt="Non-Degree Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Css</a>
+                </h3>
+
                 <p class="card-text">CSS describes how HTML elements are to be displayed </p>
+
+                <span class="card-badge">4 Lessons</span>
+
               </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="/cours/index" class="card-title">Java Script</a></h4>
-                <p class="card-text">JavaScript est un langage de script léger, orienté objet,</p>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 229, 75%, 58%">
+
+                <div class="card-icon">
+                  <img src="/images/category-3.svg" width="40" height="40" loading="lazy"
+                    alt="Off-Campus Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="/cours/index" class="card-title">Java Script</a>
+                </h3>
+
+                <p class="card-text">JavaScript is a  language to create more dynamic interactions web pages</p>
+
+                <span class="card-badge">8 Lessons</span>
+
               </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="#" class="card-title">Php</a></h4>
-                <p class="card-text">PHP is a server scripting language, and a powerful tool </p>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 42, 94%, 55%">
+
+                <div class="card-icon">
+                  <img src="/images/category-4.svg" width="40" height="40" loading="lazy"
+                    alt="Hybrid Distance Programs" class="img">
+                </div>
+                  <h3>
+
+                  <a href="#" class="card-title">Python</a>
+                </h3>
+              
+                <p class="card-text">Python is a language often used to build websites and software</p>
+                <span class="card-badge">8 Lessons</span>
+
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-        <div class="row mt-4 mb-4">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="#" class="card-title">Html</a></h4>
-                <p class="card-text">HTML is the standard markup language for creating Web pages</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="#" class="card-title">Css</a></h4>
-                <p class="card-text">CSS describes how HTML elements are to be displayed </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="#" class="card-title">Java Script</a></h4>
-                <p class="card-text">JavaScript est un langage de script léger, orienté objet,</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img src="" alt="image">
-              <div class="card-body">
-                <h4><a href="#" class="card-title">Php</a></h4>
-                <p class="card-text">PHP is a server scripting language, and a powerful tool </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+    </article>
+  </main>
+
+   
     <!-- Modal signin -->
     <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog"><br><br><br><br>

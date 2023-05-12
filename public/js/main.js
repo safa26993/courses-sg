@@ -12,3 +12,17 @@ function deleteArticle() {
         console.log(err)
     })
 }
+function deleteCours() {
+    let btn = document.getElementById('deleteBtn')
+    let id = btn.getAttribute('data-id')
+
+    axios.delete('/cours/delete/'+ id)
+    .then( (res)=> {
+        console.log(res.data)
+        alert('lesson was deleted')
+        window.location.href = '/cours'
+    })
+    .catch( (err)=> {
+        console.log(err)
+    })
+}
