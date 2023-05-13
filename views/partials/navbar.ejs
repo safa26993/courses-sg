@@ -30,37 +30,40 @@
     </div>
 </nav> --> 
 
-<nav class="navbar navbar-expand-lg sticky-top shadow">
-  <div class="container ">
-    <a class="navbar-brand" href="/cours">Coding</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav m-auto">
-        <li class="nav-item"><a class="nav-link p-3 p-lg-4" aria-current="page" href="/cours">Home</a></li>
-        <li class="nav-item"><a class="nav-link p-3 p-lg-4" href="#">About us</a></li>
-        <li class="nav-item"><a class="nav-link p-3 p-lg-4" href="/article">Article</a></li>
-        <li class="nav-item"><a class="nav-link p-3 p-lg-4"href="/article/create">Add new Article</a></li>
-        
-        <li class="nav-item"><a class="nav-link p-3 p-lg-4"href="/cours/create">Add new Lesson </a></li>
-        <li class="nav-item"><a class="nav-link p-3 p-lg-4"href="#">Contact</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link  p-3 p-lg-4 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Courses
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-            <li><a class="dropdown-item" href="">Html</a></li>
-            <li><a class="dropdown-item" href="#">Css</a></li>
-            <li><a class="dropdown-item" href="/cours/index">Js</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/cours">All courses</a></li>
-          </ul>
-        </li>
-      </ul>  
-        <a class="btn main-btn me-3" data-bs-toggle="modal" data-bs-target="#Modal" href="/users/signin">Sign in</a>
-        <a class="btn main-btn" href="/users/signup">Sign up</a>   
-      
+<header class="header" data-header>
+  <nav class="navbar navbar-expand-lg sticky-top shadow">
+    <div class="container ">
+      <a class="navbar-brand" href="/cours"><img src="/images/logo.svg" width="162" height="50" alt="EduWeb logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item"><a class="nav-link p-3 p-lg-4 fw-semibold" aria-current="page" href="/cours">Home</a></li>
+          <li class="nav-item"><a class="nav-link p-3 p-lg-4 fw-semibold" href="#">About us</a></li>
+          <li class="nav-item"><a class="nav-link p-3 p-lg-4 fw-semibold" href="/article">Article</a></li>
+          <li class="nav-item"><a class="nav-link p-3 p-lg-4 fw-semibold"href="/article/create">Add new Article</a></li>
+          
+          <li class="nav-item"><a class="nav-link p-3 p-lg-4 fw-semibold"href="/cours/create">Add new Lesson </a></li>
+          <li class="nav-item"><a class="nav-link p-3 p-lg-4 fw-semibold"href="#">Contact</a></li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link  p-3 p-lg-4 dropdown-toggle fw-semibold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Courses
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="">Html</a></li>
+              <li><a class="dropdown-item" href="#">Css</a></li>
+              <li><a class="dropdown-item" href="/cours/index">Js</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/cours">All courses</a></li>
+            </ul>
+          </li>
+        </ul>  
+          <a class="btn main-btn me-3" data-bs-toggle="modal" data-bs-target="#Modal" href="/users/signin">Sign in</a>
+          <a class="btn main-btn" href="/users/signup">Sign up</a>   
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
+
+  

@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt-nodejs')
-
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -15,16 +14,12 @@ const userSchema = new mongoose.Schema({
         required: true
     }
 })
-//methode
-userSchema.methods.hashPassword = (password) => {
+
+userSchema.methods.hashPassword = (password)=>{
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10))
-}//signup
-
-userSchema.methods.comparePasswords = (password, hash) => {
+}
+userSchema.methods.comparePasswords = (password, hash)=>{
     return bcrypt.compareSync(password,hash)
-}//signin compare
-
-let User = mongoose.model('User', userSchema, 'users')
-                    //object(model)          collection
-
-module.exports = User //استعمال export من اجل اضافة واستدعاء المةدل في ملفات اخرى
+}
+let User = mongoose.model('User', userSchema, 'users' )
+module.exports = User

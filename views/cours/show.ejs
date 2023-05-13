@@ -1,18 +1,50 @@
 <%- include('../partials/header')-%>
-<%- include('../partials/navbar')-%>
 
-
-<div class="container">
-  <div class="row mt-3 mb-5">
-      <div class="col-md-12 mt-5">
-         <h3><%=cours.title%></h3>
-         <h6><%=cours.level%></h6>
-         <hr>
-         <p><%= cours.content%></p>
-         <a href="<%= '/cours/edit/' + cours.id %>" class="btn main-btn">Edit</a>
-         <button class="btn main-btn" onclick="deleteCours()" id="deleteBtn" data-id="<%= cours.id%>">Delete</button>
-      </div>
+<div class="app">
+  <div class="menu-toggle">
+    <div class="hamburger">
+      <span></span>
+    </div>
   </div>
+  <aside class="sidebar">
+    <h4 class="text-center">Java Script</h4>
+    <% courses.forEach((cours)=> {%>
+    <nav class="menu">
+      <a href="<%='/cours/' + cours.id%>" class="menu-item">
+        <%= cours.title%>
+      </a>
+    </nav>
+    <%})%>
+  </aside>
+  <main class="content" id="11">
+    <div class="container">
+      <div class="row mt-3 mb-5">
+        <div class="col-md-12 mt-5">
+          <h3><%=cours.title%></h3>
+          <h6><%=cours.level%></h6>
+          <hr />
+          <p><%= cours.content%></p>
+          <a href="<%= '/cours/edit/' + cours.id %>" class="btn main-btn"
+            >Edit</a>
+          <button
+            class="btn main-btn"
+            onclick="deleteCours()"
+            id="deleteBtn"
+            data-id="<%= cours.id%>">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>
 
+<script>
+  const menu_toggle = document.querySelector(".menu-toggle");
+  const sidebar = document.querySelector(".sidebar");
+  menu_toggle.addEventListener("click", () => {
+    menu_toggle.classList.toggle("is-active");
+    sidebar.classList.toggle("is-active");
+  });
+</script>
 <%- include('../partials/footer')-%>

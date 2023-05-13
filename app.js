@@ -7,8 +7,6 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const passportSetup = require('./config/passport-setup')
 
-
-
 // mongoose.set('strictQuery', false)
 // mongoose.set('strictQuery', true)
 

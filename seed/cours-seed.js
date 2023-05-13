@@ -1,19 +1,6 @@
 const db = require('../config/database')
 const Cours = require('../models/Cours')
 
-// let newCours = new Cours({
-//     title: 'title test',
-//     content: 'content test',
-//     level: 'level one'
-// })
-
-// newCours.save( (err)=> {
-//     if(!err) {
-//         console.log('record was added')
-//     } else{
-//         console.log("err")
-//     }
-// })
 
 let newCourses = [
     new Cours({
