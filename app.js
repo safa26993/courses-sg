@@ -7,9 +7,6 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const passportSetup = require('./config/passport-setup')
 
-// mongoose.set('strictQuery', false)
-// mongoose.set('strictQuery', true)
-
 /// bring ejs tamplate
 app.set('view engine', 'ejs')
 
@@ -17,7 +14,7 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-/// bring static اضافة ملف الpublic يظهر في المشروع
+/// bring static 
 app.use(express.static('public'))
 app.use(express.static('uploads'))
 app.use(express.static('node_modules'))
@@ -51,6 +48,10 @@ app.use('/article', article)
 /// bring user routes
 const users = require('./routes/user-routes');
 app.use('/users', users)
+
+/// bring game routes
+const game = require('./routes/game-routes');
+app.use('/game',game)
 
 ///listen to port 3000
 app.listen(3003, ()=> {

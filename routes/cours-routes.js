@@ -8,6 +8,11 @@ router.get("/", (req, res) => {
   res.render("cours/home");
 });
 
+// lang page route
+router.get("/lang", (req, res) => {
+  res.render("cours/lang");
+});
+
 //index route
 router.get("/index", (req, res) => {
   Cours.find()
@@ -33,16 +38,15 @@ router.get("/create", (req, res) => {
 //save lesson to db
 router.post(
   "/create",
-  [
-    check("title")
-      .isLength({ min: 5 })
-      .withMessage("Titel should be more than 5 char"),
-    check("content")
-      .isLength({ min: 50 })
-      .withMessage("Lesson should be more than 50 char"),
-    check("level")
-      .isLength({ min: 6 })
-      .withMessage("level should be more than 5 char"),
+  [check("title")
+    .isLength({ min: 5 })
+    .withMessage("Titel should be more than 5 char"),
+  check("content")
+    .isLength({ min: 50 })
+    .withMessage("Lesson should be more than 50 char"),
+  check("level")
+    .isLength({ min: 6 })
+    .withMessage("level should be more than 5 char"),
   ],
   (req, res) => {
     const errors = validationResult(req);

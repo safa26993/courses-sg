@@ -1,17 +1,21 @@
 <%- include('../partials/header')-%>
-<%- include('../partials/navbar')-%>
+   <%- include('../partials/navbar')-%>
+      
 
-
-   <div class="container">
-        <div class="row mt-3 mb-5">
+      <div class="container">
+         <div class="row mt-3 mb-5">
             <div class="col-md-12 mt-5">
                <h3><%=article.title%></h3>
                <hr>
-               <p><%= article.content%></p>
-               <p><span class="badge rounded text-bg-info"><%= article.date.toDateString()%></span></p>
-               <a href="<%= '/article/edit/' + article.id %>" class="btn main-btn">Edit</a>
-               <button class="btn main-btn" onclick="deleteArticle()" id="deleteBtn" data-id="<%= article.id%>">Delete</button>
+               <p><%= article.content%> </p>
+               <p><span class="badge rounded text-bg-info">
+                     <%= article.date.toDateString()%>
+                  </span></p>
+               <div>
+                  <a href="<%= '/article/edit/' + article.id %>" class="btn main-btn">Edit</a>
+                  <button class="btn main-btn" onclick="deleteArticle()" id="deleteBtn" data-id="<%= article.id%>">Delete</button>
+               </div>
             </div>
-        </div>
-   </div>
-<%- include('../partials/footer')-%>   
+         </div>
+      </div>
+      <%- include('../partials/footer')-%>

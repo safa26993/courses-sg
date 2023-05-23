@@ -1,3 +1,5 @@
+
+// delete
 function deleteArticle() {
     let btn = document.getElementById('deleteBtn')
     let id = btn.getAttribute('data-id')
@@ -26,3 +28,8 @@ function deleteCours() {
         console.log(err)
     })
 }
+
+// Add WYISWYG editor to forms
+// tinymce.init({
+//     selector: 'textarea#default'
+//   });

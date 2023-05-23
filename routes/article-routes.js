@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Article = require('../models/Article')
-const { check, validationResult } = require('express-validator');
+const { check, validationResult, body } = require('express-validator');
 const moment = require('moment')
 moment().format()
 
@@ -21,7 +21,8 @@ router.get('/', (req,res)=> {
     })
 })
 
-//create new Article    
+
+//create new Article  
 router.get('/create', (req,res)=> {
     res.render('article/create', {
     //   errors: false
@@ -29,10 +30,13 @@ router.get('/create', (req,res)=> {
     })
 })
 
+
+
 //save article to db
 router.post('/create',
 [   check('title').isLength({min: 5}).withMessage('Titel should be more than 5 char'),
-    check('content').isLength({min: 50}).withMessage('Article content should be more than 50 char'),
+    // check('description').isLength({min: 5}).withMessage('description should be more than 5 char'),
+    check('content').isLength({min: 10}).withMessage('Article content should be more than 10 char'),
     check('date').isLength({min: 10}).withMessage('Date should valid Date'),
 ], 
 (req,res)=> {

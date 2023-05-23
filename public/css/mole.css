@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("./images/mario-bg.jpg");
+    background-size: cover;
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+    /* background-color: green; */
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url("./images/soil.png");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+
+#board div {
+    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+    width: 180px; 
+    height: 180px;
+    background-image: url("./images/pipe.png");
+    background-size: cover;
+}
+
+#board div img {
+    /* all img tags inside tiles */
+    width: 100px;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+/**/
+.gameHeader{
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.scoreDiv{
+  border: 2px solid #f2f2f2;
+  background: #f2f2f2ac;
+  margin: 0px 40px;
+  width: 30%;
+  height: 10%;
+}
+.livesDiv{
+  border: 2px solid #f2f2f2;
+  background: #f2f2f2ac;
+  margin: 0px 40px;
+  width: 30%;
+  height: 10%;
+}
+/*                                --------------->    QUIZ OR SCORE                                          */
+#quizOrScore{
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 600px;
+  height: auto;
+  background-color:/*#FACD00*/#f2f2f2;
+  /*
+  background: linear-gradient(50deg, rgba(250,205,0,1) 0%, rgb(255, 144, 47) 51% );
+  */
+  position: absolute;
+  /*top: 40px;*/
+  top: 170px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  border: 7px solid #f2f2f2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+#quizOrScore h5{
+  font-size: 18px;
+  line-height: 1.7;
+  word-spacing: 2.5px;
+  text-align: left;
+  margin: 10px 20px;
+}
+#scoreBtn{
+  border-radius: 5px;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 82, 47);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+  color: #f2f2f2;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  margin: 5px 30px;
+}
+#scoreBtn:hover,
+#doQuizBtn:hover
+{
+  color: rgb(231, 175, 33);
+  box-shadow: rgb(231, 175, 33) 0px 20px 30px -10px;
+}
+#doQuizBtn{
+  margin: 5px 30px;
+  border-radius: 5px;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 82, 47);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+  color: #f2f2f2;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+

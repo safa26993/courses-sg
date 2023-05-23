@@ -5,14 +5,19 @@ const passport = require('passport')
 
 //signin user view
 router.get('/signin', (req, res) => {
-    res.render('user/signin')
+    res.render('user/signin', {
+        error: req.flash('error')
+    })
 })
 
 //signin post request
-router.post('/signin', (req, res) => {
-    console.log(req.body)
-    res.json('user in signin')
-})
+router.post('/signin',
+    passport.authenticate('local.signin', {
+        successRedirect: '/users/profile',
+        failureRedirect: '/users/signin',
+        failureFlash: true
+    })
+)
 
 //signup user view
 router.get('/signup', (req, res) => {
@@ -21,19 +26,14 @@ router.get('/signup', (req, res) => {
     })
 })
 
-// //signup post request
-// router.post('/signup', (req,res)=> {
-//     console.log(req.body)
-//     res.json('user in signup')
-// })
-
 //signup post request
 router.post('/signup',
     passport.authenticate('local.signup', {
         successRedirect: '/users/profile',
         failureRedirect: '/users/signup',
         failureFlash: true
-    }))
+    })
+)
 
 //profile
 router.get('/profile', (req, res) => {

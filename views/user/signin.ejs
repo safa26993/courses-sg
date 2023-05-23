@@ -1,6 +1,6 @@
 <%- include('../partials/header')-%>
 <%- include('../partials/navbar')-%>
-
+<%- include('../partials/flashMessages') -%> 
 <!-- Modal signin -->
 <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog"><br><br><br><br>
@@ -10,7 +10,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <%- include('../partials/flashMessages') -%>  
+           
           <form action="/users/signin" method="post">
             <div class="form-group mb-3">
               <label for="email" class="form-label">Email address</label>

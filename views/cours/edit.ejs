@@ -1,61 +1,36 @@
 <%- include('../partials/header')-%>
-<%- include('../partials/navbar')-%>
+  <%- include('../partials/navbar')-%>
 
-<div class="container">
-  <div class="card shadow m-4">
-      <div class="card-body">
+    <div class="container">
+      <div class="card shadow m-4">
+        <div class="card-body">
+          <a href="/cours/index" class="card-btn" aria-label="read more">
+            <i class="fa-solid fa-arrow-left" style="color: black; font-size: 25px;"></i>
+          </a>
           <h3 class="title p-4 pb-0">Edit Lesson</h3>
           <hr>
-          <%- include('../partials/flashMessages') -%>  
-          <form  action="/cours/update" method="post">
+          <%- include('../partials/flashMessages') -%>
+            <form action="/cours/update" method="post">
               <div class="from-group mb-3">
-                  <label for="title">Title of lesson</label>
-                  <input type="text" name="title" id="title" class="form-control" value="<%= cours.title%>">
+                <label for="title">Title of lesson</label>
+                <input type="text" name="title" id="title" class="form-control" value="<%= cours.title%>">
               </div>
-              
+
               <input type="hidden" name="id" value="<%= cours.id%>">
               <div class="from-group mb-3">
-                  <label for="level">Level</label>
-                  <input type="text" name="level" id="level" class="form-control" value="<%= cours.level%>">
+                <label for="level">Level</label>
+                <input type="text" name="level" id="level" class="form-control" value="<%= cours.level%>">
               </div>
               <div class="form-group mb-3">
-                  <label for="content">The content of lesson</label>
-                  <textarea name="content" rows="12" class="form-control">value="<%= cours.content%>"</textarea>
+                <label for="content">The content of lesson</label>
+                <textarea name="content" rows="12" class="form-control">value="<%= cours.content%>"</textarea>
               </div>
               <div class="from-group mb-3">
-                  <button type="submit" class="w-100 btn main-btn btn-lg mt-3 shadow">Update</button>
+                <button type="submit" class="w-100 btn main-btn btn-lg mt-3 shadow">Update</button>
               </div>
-          </form>
-      </div>       
-  </div>
-</div>
-
-<%- include('../partials/footer')-%>
-
-
-  <!-- <div class="app">
-    <div class="menu-toggle">
-      <div class="hamburger">
-        <span></span>
+            </form>
+        </div>
       </div>
     </div>
-   
-    <aside class="sidebar">
-      <h3>Courses</h3>
-      <nav class="menu">
-        <a href="#" class="menu-item "><%= cours.title%></a>
-      </nav>
-    </aside>
-    <main class="content" id="11">
-      <h1>course title</h1>
-      <p>course content :
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, nihil qui, architecto tempora hic
-        ad beatae a esse vitae reiciendis, accusamus praesentium modi perspiciatis laboriosam ex. Repellendus
-        dolore natus fugiat?
-      </p>
-      <button id="play-btn">
-        go to play
-      </button>
-    </main>
-  </div> -->
- 
+
+    <%- include('../partials/footer')-%>

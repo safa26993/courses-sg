@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
+    <meta http-equiv="refresh" content="5; url=/quizz.html">
+    <meta http-equiv="refresh" content="5; url=/index2.html">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCode-The game</title>
+    <link rel="stylesheet" href="/css/mole.css">  
+    <link rel="stylesheet" href="/css/quiz.css">  
+</head>
+<body id="body">
+    <!-- <h1>Whac a Mole</h1> -->
+    <div class="gameHeader">
+      <div class="scoreDiv">
+        <h3>score</h3>
+        <h3 id="score">0</h3>
+      </div>
+      <div class="livesDiv">
+        <h3>Lives</h3>
+        <h3 id="playerLives">3</h3>
+      </div>
+    </div>
+    <!-- 3x3 -->
+    <div id="board"></div>
+
+
+    <!--  quiz or score--  --> 
+    <div class="quizOrScore" id="quizOrScore">
+        <h3 style="color:rgb(255, 82, 47)"> QUIZ OR SCORE ? </h3>
+        <h5>Would you rather lose your score by 20 points or would you rather answer the question</h5>
+        <button id="scoreBtn">Score</button>
+        <button id="doQuizBtn">Quiz</button>
+    </div>
+    
+    <!-- quiz --> 
+    <div class="app">
+        <div class="appLevel">
+            <h4>level</h4> 
+            <h4 id="level">1</h4>
+        </div>
+        <h1>quiz</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <script src="/js/mole.js"></script>
+    <script src="/js/quiz.js"></script>
+</body>
+</html>

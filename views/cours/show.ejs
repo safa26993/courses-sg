@@ -6,8 +6,11 @@
       <span></span>
     </div>
   </div>
-  <aside class="sidebar">
-    <h4 class="text-center">Java Script</h4>
+  <aside class="sidebar" style="background-image: url('/images/footer-bg.png')">
+    <a href="/cours/index" class="card-btn" aria-label="read more">
+      <i class="fa-solid fa-arrow-left" style="color: white; font-size: 25px;"></i>
+    </a>
+    <h4 class="text-center"><a href="/cours/index">Java Script</a></h4>
     <% courses.forEach((cours)=> {%>
     <nav class="menu">
       <a href="<%='/cours/' + cours.id%>" class="menu-item">

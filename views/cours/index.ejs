@@ -6,7 +6,10 @@
         <span></span>
       </div>
     </div>
-    <aside class="sidebar">
+    <aside class="sidebar" style="background-image: url('/images/footer-bg.png')">
+      <a href="/cours" class="card-btn" aria-label="read more">
+        <i class="fa-solid fa-arrow-left" style="color: white; font-size: 25px;"></i>
+      </a>
       <h4 class="text-center">Java Script</h4>
       <% courses.forEach((cours)=> {%>
         <nav class="menu">
@@ -17,16 +20,23 @@
         <%})%>
     </aside>
     <main class="content" id="11">
-    <h1>course title</h1>
-    <p>course content :
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, nihil qui, architecto tempora hic
-      ad beatae a esse vitae reiciendis, accusamus praesentium modi perspiciatis laboriosam ex. Repellendus
-      dolore natus fugiat?
-    </p>
-    <button id="play-btn">
-      go to play
-    </button>
-  </main>
+      <h1 class="title-content">JavaScript</h1><hr>
+      <p>JavaScript is a programming language mainly used on the Internet, in addition to HTML and CSS.
+        It uses scripts to create dynamic content. It thus complements the two other basic languages of the Web and can store values, perform operations or even execute code according to certain events.
+        It is a prototype-oriented language, that is to say similar to an object-oriented language, but without class.
+        Although it is mainly found on the client side, it can also be used on the server side.
+        When it loads on the client side, it is a particularly fast and efficient language that does not require any querying to the server. It is appreciated for its simplicity, flexibility and power.
+      </p>
+      <br>
+      <h2 class="title-content">Why Study JavaScript?</h2><hr>
+      <p>
+        JavaScript is one of the 3 languages all web developers must learn:
+        <br><span class="card-title">1.</span> HTML to define the content of web pages
+        <br><span class="card-title">2.</span> CSS to specify the layout of web pages
+        <br><span class="card-title">3.</span> JavaScript to program the behavior of web pages
+      </p>
+      <a href="/game"class="btn main btn" id="play-btn">go to play</a>
+    </main>
   </div>
 
   <script>
