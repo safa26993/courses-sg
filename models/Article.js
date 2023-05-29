@@ -4,10 +4,6 @@ const articleSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // description: {
-    //     type: String,
-    //     required: true
-    // },
     content: {
         type: String,
         required: true
@@ -19,6 +15,10 @@ const articleSchema = new mongoose.Schema({
     created_at: {
         type: Date,
         required: true
+    },
+    img: {
+        type: String,
+        default: 'code.png',
     }
 })
 let Article = mongoose.model('Article', articleSchema, 'article')

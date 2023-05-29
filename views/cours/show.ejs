@@ -26,7 +26,7 @@
           <h3><%=cours.title%></h3>
           <h6><%=cours.level%></h6>
           <hr />
-          <p><%= cours.content%></p>
+          <p><%- cours.content%></p>
           <a href="<%= '/cours/edit/' + cours.id %>" class="btn main-btn"
             >Edit</a>
           <button

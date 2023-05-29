@@ -1,6 +1,7 @@
 const db = require('../config/database')
 const Article = require('../models/Article')
 
+
 // let newArticle = new Article({
 //     title: 'title test',
 //     description: 'description test'
@@ -33,21 +34,24 @@ let newArticles = [
     //   description: 'description',
       content: 'Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,v',
       date:  Date.now(),
-      created_at: Date.now()
+      created_at: Date.now(),
+      img: 'course-3.jpg'
   }),
   new Article({
       title: 'beach cleaning at 22',
     //   description: 'description',
       content: 'Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,v',
       date:  Date.now(),
-      created_at: Date.now()
+      created_at: Date.now(),
+      img: 'course-3.jpg'
   }),
   new Article({
       title: 'beach cleaning at 33',
     //   description: 'description',
       content: 'Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,v',
       date:  Date.now(),
-      created_at: Date.now()
+      created_at: Date.now(),
+      img: 'course-3.jpg'
   })
 ]
 

@@ -4,6 +4,27 @@ const Article = require('../models/Article')
 const { check, validationResult, body } = require('express-validator');
 const moment = require('moment')
 moment().format()
+const multer  = require('multer')
+
+//define storage for the images
+const storage = multer.diskStorage({
+    //destination for files
+    destination: function (req, file, callback) {
+      callback(null, '/uploads/images');
+    },
+    //add back the extension
+    filename: function (req, file, callback) {
+      callback(null, Date.now() + file.originalname)
+    }
+})
+
+//upload parameters for multer
+const upload = multer({
+    storage: storage,
+    limits: {
+      fieldSize: 1024 * 1024 * 3,
+    }
+})
 
 router.get('/', (req,res)=> {
     Article.find({}, (err,articles)=> {
@@ -21,7 +42,6 @@ router.get('/', (req,res)=> {
     })
 })
 
-
 //create new Article  
 router.get('/create', (req,res)=> {
     res.render('article/create', {
@@ -30,17 +50,14 @@ router.get('/create', (req,res)=> {
     })
 })
 
-
-
 //save article to db
-router.post('/create',
+router.post('/create',upload.single('image'),
 [   check('title').isLength({min: 5}).withMessage('Titel should be more than 5 char'),
-    // check('description').isLength({min: 5}).withMessage('description should be more than 5 char'),
     check('content').isLength({min: 10}).withMessage('Article content should be more than 10 char'),
     check('date').isLength({min: 10}).withMessage('Date should valid Date'),
 ], 
 (req,res)=> {
-
+    console.log(request.file);
     const errors = validationResult(req)
     if( !errors.isEmpty()) {
 
@@ -51,7 +68,8 @@ router.post('/create',
             title: req.body.title,
             content: req.body.content,
             date: req.body.date,
-            created_at: Date.now()
+            created_at: Date.now(),
+            img: req.file.filename
         })
     
         newArticle.save( (err)=> {

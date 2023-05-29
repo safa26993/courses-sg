@@ -2,7 +2,8 @@
 
 :root {
 	--dark-color: #2e3047;
-	--btn-color: #3bba9c;
+	/* --btn-color: #3bba9c; */
+	--btn-color:  hsl(170, 75%, 41%);
 	--selective-yellow: hsl(42, 94%, 55%);
 	--eerie-black-1: hsl(0, 0%, 9%);
 	--eerie-black-2: hsl(180, 3%, 7%);
